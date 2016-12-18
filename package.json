@@ -1,0 +1,14 @@
+{
+  "name": "polymer-resolve-url-issue",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/WoodyWoodsta/polymer-resolve-url-issue.git",
+  "author": "Sean Wood <woodywoodsta@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "static-server": "^2.0.3"
+  },
+  "scripts": {
+    "serve": "cd app && static-server -p 3000"
+  }
+}

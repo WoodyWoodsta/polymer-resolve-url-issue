@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>polymer-resolve-url-issue</title>
+    <meta name="description" content="polymer-resolve-url-issue">
+
+    <!-- Polymer -->
+    <!-- <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script> -->
+    <script type="text/javascript">
+      window.Polymer = {
+        dom: 'shadow',
+        lazyRegister: true,
+        useNativeCSSProperties: true,
+      };
+    </script>
+
+    <!-- Polymer -->
+    <link rel="import" href="./bower_components/polymer/polymer.html">
+
+    <!-- Element Imports -->
+    <link rel="import" href="./elements/element-1/element-1.html">
+    <link rel="import" href="./elements/element-2/element-2.html">
+
+  </head>
+  <body>
+    <element-1>
+      <element-2></element-2>
+    </element-1>
+  </body>
+</html>

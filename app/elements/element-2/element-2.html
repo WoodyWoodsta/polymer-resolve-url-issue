@@ -1,0 +1,54 @@
+<dom-module id="element-2">
+  <template>
+    <style>
+      :host {
+        display: block;
+
+      }
+
+      img {
+        margin: auto;
+        height: 75px;
+        width: 75px;
+      }
+    </style>
+
+    <img id="image" src="resources/image.jpg" alt="">
+    <div><span>Image src url:&nbsp;</span><span>[[imgSrcUrl]]</span></div>
+    <div><span>resolveURL url:&nbsp;</span><span>[[resolveUrlResult]]</span></div>
+
+  </template>
+
+  <script type="text/javascript">
+    class Element2 extends Polymer.Element {
+      static get is() { return 'element-2'; }
+
+      static get config() {
+        return {
+          properties: {
+            imgSrcUrl: {
+              type: String,
+            },
+
+            resolveUrlResult: {
+              type: String,
+            },
+          },
+        };
+      }
+
+      connectedCallback() {
+        super.connectedCallback();
+
+        console.log('Hello');
+
+        debugger;
+        this.imgSrcUrl = this.$.image.src;
+        this.resolveUrlResult = this.resolveUrl('resources/image.jpg');
+      }
+    }
+
+
+    customElements.define(Element2.is, Element2);
+  </script>
+</dom-module>
